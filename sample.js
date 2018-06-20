@@ -6,9 +6,8 @@ var driver = new webdriver.Builder().forBrowser('chrome').build();
 driver.get('https://developers.google.com');
 
 driver.findElement(By.id('google-cloud-next-18br-july-24-26-san-francisco-usa')).click();
-
-await driver.sleep(5000);
-await driver.findElement(By.xpath('//*[@id="main"]/span/div[1]/div/div/div/div[4]/button')).click();
+driver.sleep(5000);
+driver.findElement(By.xpath('//*[@id="main"]/span/div[1]/div/div/div/div[4]/button')).click();
  var searchForm = driver.findElement(By.tagName('form'));
  var searchBox = searchForm.findElement(By.name('q'));
  searchBox.sendKeys('webdriver');
